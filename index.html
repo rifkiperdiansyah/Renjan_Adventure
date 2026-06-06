@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renjana Adventure - Wisata Petualangan Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#"><img src="img/renjana.png" alt="Royal Adventure Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#paket">Paket Wisata</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div id="particles-container"></div> <!-- Container untuk partikel -->
+            <h1 id="hero-title">Jelajahi Alam Pangalengan <br> Renjana Adventure</h1>
+            <p id="hero-desc">Nikmati pengalaman tak terlupakan dengan paket Rafting, Camping, dan Offroad terbaik di Bandung Selatan.</p>
+            <a href="#paket" class="btn btn-primary">Pesan Sekarang</a>
+        </div>
+        <div class="hero-nav">
+            <button id="prevBtn" class="nav-btn"><i class="fas fa-arrow-left"></i></button>
+            <button id="nextBtn" class="nav-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Paket Wisata Section -->
+    <section id="paket" class="packages section-padding">
+        <div class="container">
+            <h2 class="section-title">Paket Wisata Populer</h2>
+            <div class="grid-container">
+                <!-- Paket 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Rafting">
+                        <div class="price">Rp 150.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting Palayangan</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-shield-alt"></i> Asuransi</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Pacu adrenalin Anda di jeram Sungai Palayangan yang menantang.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Sungai Palayangan
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/rr2.JPG" alt="Full Day Rafting">
+                        <div class="price">Rp 475.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting Full Day</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-user-friends"></i> Team Building</li>
+                            <li><i class="fas fa-paint-brush"></i> Paintball</li>
+                            <li><i class="fas fa-walking"></i> Flying Fox</li>
+                            <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-cookie-bite"></i> Snack 2x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Paket arung jeram lengkap dengan konsumsi dan fasilitas pendukung lainnya.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Situ Cileunca
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Offroad">
+                        <div class="price">Rp 350.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting ATV</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-user-cog"></i> ATV</li>
+                           <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Menembus hutan dan kebun teh dengan kendaraan 4x4 legendaris.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Hutan Rahong
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 4 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Flying Fox">
+                        <div class="price">Rp 475.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting Offroad</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-truck-monster"></i> Land Rover</li>
+                             <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-cookie-bite"></i> Snack 1x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Meluncur di atas danau dengan pemandangan pegunungan yang indah.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Situ Cileunca
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 5 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Outbound">
+                        <div class="price">Rp 275.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting Adventure</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-paint-brush"></i> Paintball</li>
+                            <li><i class="fas fa-walking"></i> Flying Fox</li>
+                            <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-cookie-bite"></i> Snack 1x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Tingkatkan kekompakan tim melalui berbagai simulasi permainan seru.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Pine Forest Rahong
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 6 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Tea Walk">
+                        <div class="price">Rp 375.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Gathering</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-user-friends"></i> Fun Games</li>
+                            <li><i class="fas fa-paint-brush"></i> Paintball</li>
+                            <li><i class="fas fa-walking"></i> Flying Fox</li>
+                            <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-cookie-bite"></i> Snack 2x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Jelajahi hamparan kebun teh yang hijau dan hirup udara pagi yang segar.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Perkebunan Malabar
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+                <!-- Paket 7 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/r11.jpg" alt="Tea Walk">
+                        <div class="price">Rp 250.000</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rafting Games</h3>
+                        <span class="card-section-title">Termasuk:</span>
+                        <ul class="card-details">
+                            <li><i class="fas fa-sailboat"></i> Rafting</li>
+                            <li><i class="fas fa-user-friends"></i> Fun Games</li>
+                            <li><i class="fas fa-utensils"></i> Makan 1x</li>
+                            <li><i class="fas fa-helmet-safety"></i> Alat Safety</li>
+                            <li><i class="fas fa-user-friends"></i> Guide</li>
+                            <li><i class="fas fa-camera"></i> Dokumentasi</li>
+                        </ul>
+                        <span class="card-section-title">Deskripsi:</span>
+                        <p>Jelajahi hamparan kebun teh yang hijau dan hirup udara pagi yang segar.</p>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Perkebunan Malabar
+                        </div>
+                        <a href="https://wa.me/6285842852643" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="gallery section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Galeri Kegiatan</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80" alt="Galeri 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" alt="Galeri 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=400&q=80" alt="Galeri 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1508873696983-2dfd5898f04b?auto=format&fit=crop&w=400&q=80" alt="Galeri 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-logo">
+                    <div class="logo">
+                        <a href="#"><img src="img/renjana.png" alt="Renjana Adventure Logo"></a>
+                    </div>
+                </div>
+                <p>
+                    Renjana Adventure Pangalengan adalah mitra terpercaya Anda untuk eksplorasi alam di Bandung Selatan. 
+                    Berawal dari kecintaan terhadap keindahan alam Pangalengan, kami hadir untuk memfasilitasi 
+                    petualangan Anda dengan standar keamanan tinggi dan pelayanan profesional. 
+                    Kami percaya bahwa setiap momen petualangan adalah cerita yang berharga.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-item">
+                    <p>"Pelayanan luar biasa! Guide-nya sangat profesional dan ramah. Pengalaman rafting terseru yang pernah saya coba."</p>
+                    <h4>- Andi Wijaya</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Pemandangan di camp site sangat indah. Fasilitas bersih dan paket makanannya enak sekali. Worth it!"</p>
+                    <h4>- Siti Aminah</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer">
+        <div class="container grid-footer">
+            <div class="footer-info">
+                <h3>RENJANA ADVENTURE</h3>
+                <p>Pangalengan, Kabupaten Bandung, Jawa Barat.</p>
+                <p>Email: info@renjanaadventurepangalengan.com</p>
+                <p>Phone: +62 858 4285 2643</p>
+            </div>
+            <div class="footer-map">
+                <h3>Lokasi Kami</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.825727931326!2d107.5658603749969!3d-7.13094899287346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b13926671173%3A0x17d740702812035!2sSitu%20Cileunca%20Pangalengan!5e0!3m2!1sid!2sid!4v1701000000000!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Renjana Adventure Pangalengan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6285842852643" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+   <script src="script.js"></script>
+
+</body>
+</html>

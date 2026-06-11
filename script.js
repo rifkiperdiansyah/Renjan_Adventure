@@ -141,3 +141,44 @@
 
             particlesContainer.appendChild(particle);
         }
+
+        // --- Logic Modal Detail Paket ---
+        const modal = document.getElementById("packageModal");
+        const closeModal = document.querySelector(".close-modal");
+        const modalPesanSekarangBtn = document.getElementById("modal-pesan-sekarang");
+
+        document.querySelectorAll(".detail-btn").forEach(btn => {
+            btn.addEventListener("click", function() {
+                const card = this.closest(".card");
+                const imgSrc = card.querySelector(".card-img img").src;
+                const title = card.querySelector("h3").innerText;
+                const description = card.querySelector("p").innerText;
+                const details = card.querySelector(".card-details").innerHTML;
+                const price = card.querySelector(".price").innerText; // Ambil harga dari card
+                const location = card.querySelector(".card-location").innerText; // Ambil lokasi
+
+                document.getElementById("modal-img").src = imgSrc;
+                document.getElementById("modal-title").innerText = title;
+                document.getElementById("modal-desc").innerText = description;
+                // Menambahkan harga dan lokasi ke modal-info
+                document.getElementById("modal-info").innerHTML = `<p><strong>Harga:</strong> ${price}</p><p><strong>Lokasi:</strong> ${location}</p><span class="card-section-title">Termasuk:</span><ul class="card-details">${details}</ul>`;
+
+                // Set link WhatsApp untuk tombol "Pesan Sekarang" di modal
+                modalPesanSekarangBtn.href = `https://wa.me/6285842852643?text=Halo,%20saya%20tertarik%20dengan%20paket%20*${encodeURIComponent(title)}*%20(${encodeURIComponent(price)})%20yang%20berlokasi%20di%20${encodeURIComponent(location)}.%20Mohon%20informasi%20lebih%20lanjut.`;
+
+                modal.style.display = "block";
+                document.body.style.overflow = "hidden"; // Disable scroll saat modal buka
+            });
+        });
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }

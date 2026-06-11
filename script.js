@@ -42,17 +42,17 @@
 
         const heroData = [
             {
-                img: 'img/DSC04600.JPG',
+                img: 'img/bg1.jpeg',
                 title: 'Jelajahi Alam Pangalengan <br> RENJANA ADVENTURE',
                 desc: 'Nikmati pengalaman tak terlupakan dengan paket Rafting, Camping, dan Offroad terbaik di Bandung Selatan.'
             },
             {
-                img: 'img/DSC04600.JPG',
+                img: 'img/r1.jpg',
                 title: 'Pacu Adrenalin <br> Arung Jeram',
                 desc: 'Taklukkan jeram Sungai Palayangan yang menantang bersama instruktur profesional.'
             },
             {
-                img: 'img/DSC04600.JPG',
+                img: 'img/bg1.jpeg',
                 title: 'Malam Tenang <br> Di Alam Pangalengan',
                 desc: 'Rasakan kehangatan api unggun dan kenyamanan Luxury Camping di bawah bintang.'
             }

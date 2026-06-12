@@ -247,6 +247,57 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Paket Custom Section -->
+            <div class="custom-package-container">
+                <div class="custom-package-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Buat Paket Custom Sendiri</h3>
+                    <p>Pilih kegiatan yang Anda inginkan (Minimal 5 Orang)</p>
+                </div>
+                <div class="custom-package-body">
+                    <p style="margin-bottom: 15px; font-weight: 600; color: var(--primary-green);">Paket Per Orang:</p>
+                    <div class="activities-grid">
+                        <div class="activity-item"><label><input type="checkbox" value="150000" data-name="Rafting" data-type="person"> Rafting (150k/Org)</label></div>
+                        <div class="activity-item"><label><input type="checkbox" value="95000" data-name="Paintball" data-type="person"> Paintball (95k/Org)</label></div>
+                        <div class="activity-item"><label><input type="checkbox" value="35000" data-name="Flying Fox" data-type="person"> Flying Fox (35k/Org)</label></div>
+                        <div class="activity-item"><label><input type="checkbox" value="45000" data-name="Fun Games" data-type="person"> Fun Games (45k/Org)</label></div>
+                    </div>
+                    
+                    <p style="margin-bottom: 15px; font-weight: 600; color: var(--primary-green);">Paket Per Unit:</p>
+                    <div class="activities-grid">
+                        <div class="activity-item unit-type">
+                            <label><input type="checkbox" value="1700000" data-name="Offroad" data-type="unit"> Offroad (1.700K /Unit)</label>
+                            <input type="number" class="unit-qty" value="1" min="1" title="Jumlah Unit">
+                        </div>
+                        <div class="activity-item unit-type">
+                            <label><input type="checkbox" value="275000" data-name="ATV" data-type="unit"> ATV (275k /Unit)</label>
+                            <input type="number" class="unit-qty" value="1" min="1" title="Jumlah Unit">
+                        </div>
+                    </div>
+                    
+                    <div class="custom-controls">
+                        <div class="person-selector">
+                            <span>Jumlah: Min (5 Orang)</span>
+                            <div class="qty-control">
+                                <button type="button" id="minus-person">-</button>
+                                <input type="number" id="person-count" value="5" min="5" readonly>
+                                <button type="button" id="plus-person">+</button>
+                            </div>
+                        </div>
+                        <div class="total-display">
+                            <span>Estimasi Total:</span>
+                            <h2 id="custom-total-price">Rp 0</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-footer">
+                        <a href="#" id="pesan-custom-btn" class="btn btn-primary btn-block">
+                            <i class="fab fa-whatsapp"></i> Pesan Paket Custom
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

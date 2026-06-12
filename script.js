@@ -182,3 +182,72 @@
                 document.body.style.overflow = "auto";
             }
         }
+
+        // --- Logic Kalkulator Paket Custom ---
+        const personInput = document.getElementById("person-count");
+        const minusBtn = document.getElementById("minus-person");
+        const plusBtn = document.getElementById("plus-person");
+        const checkboxes = document.querySelectorAll(".activity-item input[type='checkbox']");
+        const unitQtys = document.querySelectorAll(".unit-qty");
+        const totalDisplay = document.getElementById("custom-total-price");
+        const pesanBtn = document.getElementById("pesan-custom-btn");
+
+        function calculateTotal() {
+            let personBasedTotal = 0;
+            let unitBasedTotal = 0;
+            let selectedList = [];
+            
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const price = parseInt(cb.value);
+                    const type = cb.getAttribute("data-type");
+                    const name = cb.getAttribute("data-name");
+
+                    if (type === "unit") {
+                        const qtyInput = cb.closest('.activity-item').querySelector('.unit-qty');
+                        const qty = parseInt(qtyInput.value) || 1;
+                        unitBasedTotal += (price * qty);
+                        selectedList.push(`${name} (${qty} Unit)`);
+                    } else {
+                        personBasedTotal += price;
+                        selectedList.push(name);
+                    }
+                }
+            });
+
+            const count = parseInt(personInput.value);
+            const finalTotal = (personBasedTotal * count) + unitBasedTotal;
+            
+            totalDisplay.innerText = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(finalTotal);
+
+            // Update WA Link
+            if (selectedList.length > 0) {
+                const msg = `Halo Renjana Adventure, saya ingin pesan *Paket Custom* untuk *${count} orang*.\n\nKegiatan:\n- ${selectedList.join('\n- ')}\n\n*Total Estimasi: ${totalDisplay.innerText}*`;
+                pesanBtn.href = `https://wa.me/6285842852643?text=${encodeURIComponent(msg)}`;
+            } else {
+                pesanBtn.href = "#";
+            }
+        }
+
+        plusBtn.addEventListener("click", () => {
+            personInput.value = parseInt(personInput.value) + 1;
+            calculateTotal();
+        });
+
+        minusBtn.addEventListener("click", () => {
+            if (parseInt(personInput.value) > 5) {
+                personInput.value = parseInt(personInput.value) - 1;
+                calculateTotal();
+            }
+        });
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener("change", calculateTotal);
+        });
+
+        unitQtys.forEach(input => {
+            input.addEventListener("input", calculateTotal);
+        });
+
+        // Initial calculate
+        calculateTotal();
